@@ -6,10 +6,7 @@ import com.report.ExtentManager;
 import com.report.ExtentTestManager;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -132,8 +129,8 @@ public class TestBase {
 
     //screenshot used to capture failures
     public static void captureScreenshot(WebDriver driver, String screenshotName) {
-        DateFormat df = new SimpleDateFormat("HH_mm_ss");
-        Date date = new Date();
+        DateFormat df = new SimpleDateFormat("HH_mm_ss"); //gets unique name for screenshot
+        Date date = new Date(); //gets current date for screenshot in order to name it
         df.format(date);
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
@@ -145,13 +142,13 @@ public class TestBase {
     }
 
     //reporting starts created by extent report guys in order to use in framework
-    @BeforeSuite
+    @BeforeSuite //gets executed before running everything (before mvn clean test)
     public void extentSetup(ITestContext context) {
         ExtentManager.setOutputDirectory(context);
         extent = ExtentManager.getInstance();
     }
 
-    @BeforeMethod
+    @BeforeMethod //executed before running test methods to start logs from extent reporting
     public void startExtent(Method method) {
         String className = method.getDeclaringClass().getSimpleName();
         ExtentTestManager.startTest(method.getName());
@@ -195,7 +192,7 @@ public class TestBase {
     }
 
     @AfterSuite
-    public void generateReport() {
+    public void generateReport() { //closes object of extent
         extent.close();
     }
     //reporting finish to automatically generate report

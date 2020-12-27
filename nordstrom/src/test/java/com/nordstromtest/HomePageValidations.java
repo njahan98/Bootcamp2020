@@ -7,13 +7,22 @@ import org.testng.annotations.Test;
 
 public class HomePageValidations extends TestBase {
     @Test(enabled = false)
-    public void validateUserClickingWomensButton() {
+    public void validateClickOnSearch() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.clickWomensDropDownButton();
+        sleepFor(5);
+        homePage.clickSearchButton();
+    }
+    @Test(enabled = false)
+    public void validateTypeOnSearch() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        validateClickOnSearch();
+        homePage.typeOnSearchBar();
     }
     @Test
-    public void validateUserClickingSaleButton(){
+    public void validateClickOnDropDown() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.clickSaleButton();
+        validateTypeOnSearch();
+        sleepFor(5);
+        homePage.clickOnToryHandbags();
     }
 }
