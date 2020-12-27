@@ -14,6 +14,12 @@ public class HomePage {
     @FindBy(xpath = "(//span[@class='_3eBEY'])")
     private WebElement dropDownOption;
 
+    @FindBy(xpath = "(//select[@class='_27zs1'])")
+    private WebElement sortByDropdown;
+
+    @FindBy(xpath = "(//option[@value='PriceLowToHigh'])")
+    private WebElement sortByLowToHigh;
+
     public void clickSearchButton(){
         searchButton.click();
     }
@@ -22,5 +28,11 @@ public class HomePage {
     }
     public void clickOnToryHandbags(){
         dropDownOption.click();
+    }
+    public void clickOnSortBy(){
+        sortByDropdown.click();
+    }
+    public void sortLowToHigh(){
+        sortByLowToHigh.click();
     }
 }
