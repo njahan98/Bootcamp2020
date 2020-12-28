@@ -17,9 +17,21 @@ public class ProductPageValidations extends TestBase {
     public void pageFactorySetup(){
         productPage = PageFactory.initElements(driver,ProductPage.class);
     }
-    @Test
+
+    @Test(enabled = false)
+    public void validateUserOnNordstromPage() {
+        productPage.nordstromHomePage();
+    }
+    @Test(enabled = false)
     public void validateUserClickingWomensSale() {
-        productPage.womensSaleTab();
+        productPage.womensSaleOption();
+        sleepFor(5);
+    }
+    @Test(enabled = false)
+    public void validateUserHoveringOverItem() {
+        validateUserOnNordstromPage();
+        sleepFor(3);
+        productPage.hoverOverOption();
         sleepFor(5);
     }
 

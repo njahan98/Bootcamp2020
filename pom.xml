@@ -11,6 +11,7 @@
     <modules>
         <module>generic</module>
         <module>nordstrom</module>
+        <module>facebook</module>
     </modules>
 
     <properties>
