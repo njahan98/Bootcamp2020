@@ -27,4 +27,16 @@ public class MainPageValidations extends TestBase {
         mainPage.enterNameInSearchBar();
         sleepFor(5);
     }
+    @Test(enabled = false)
+    public void validateUserClicksFriendRequest(){
+        mainPage.lookAtFriendRequests();
+        sleepFor(3);
+        mainPage.addingFriendRequest();
+        sleepFor(3);
+    }
+    @Test(enabled = false)
+    public void validateUserGoingToProfile(){
+        mainPage.clickProfilePage();
+        sleepFor(5);
+    }
 }

@@ -12,13 +12,34 @@ public class MainPage extends TestBase {
             "rmlgq0sb aj8hi1zk r4fl40cc kd8v7px7 m07ooulj mzan44vs']")
     private WebElement searchBar;
 
+    @FindBy(xpath = "//span[@class='s45kfl79 emlxlaya bkmhp75w spb7xbtv pq6dq46d e9vueds3 ekzkrbhg omvj5yrc jiuqdcnw d82f96u3 gky8063y']")
+    private WebElement friendRequests;
+
+    @FindBy(xpath = "//span[@class='d2edcug0 hpfvmrgz qv66sw1b c1et5uql oi732d6d ik7dh3pa fgxwclzu a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d9wwppkn fe6kdd0r mau55g9w c8b282yb " +
+            "iv3no6db jq4qci2q a3bd9o3v lrazzd5p bwm1u5wc']")
+    private WebElement addFriend;
+
+    @FindBy(linkText = "Tursun Nahaj")
+    private WebElement openProfile;
+
     public void clickSearchBar(){
         searchBar.click();
         ExtentTestManager.log("User clicks search bar");
     }
     public void enterNameInSearchBar(){
-        sleepFor(5);
         searchBar.sendKeys("Kevin Jai", Keys.RETURN);
         ExtentTestManager.log("User is able to search for friend");
+    }
+    public void lookAtFriendRequests(){
+        friendRequests.click();
+        ExtentTestManager.log("User checks friend request tab");
+    }
+    public void addingFriendRequest(){
+        addFriend.click();
+        ExtentTestManager.log("User adds friend");
+    }
+    public void clickProfilePage(){
+        openProfile.click();
+        ExtentTestManager.log("User opens profile page");
     }
 }
