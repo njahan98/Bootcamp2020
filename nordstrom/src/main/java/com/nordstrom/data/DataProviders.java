@@ -1,6 +1,11 @@
 package com.nordstrom.data;
 
-public class DataProviders {
+import org.testng.annotations.DataProvider;
 
+public class DataProviders {
+    @DataProvider(name = "searchData")
+    public Object[] getSearchData(){
+        return new Object[]{"Tory Burch Handbags","Charlotte Tilbury Makeup"};
+    }
 }
 

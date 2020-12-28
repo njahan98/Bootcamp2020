@@ -36,7 +36,7 @@ public class TestBase {
     public static String browserStackUserName = "nusrutjahan1";
     public static String browserStackKey = "gcLzGtJzfLXa6GCjqf41";
     public static String SAUCE_URL = "http://" + sauceUserName + ":" + sauceKey + "@ondemand.saucelabs.com:80/wd/hub";
-    public static String BROWERSTACK_URL = "https://" + browserStackUserName + ":" + browserStackKey + "@hub-cloud.browserstack.com/wd/hub";
+    public static String BROWSERSTACK_URL = "https://" + browserStackUserName + ":" + browserStackKey + "@hub-cloud.browserstack.com/wd/hub";
     private static Logger LOGGER = Logger.getLogger(TestBase.class);
 
     /**
@@ -87,16 +87,16 @@ public class TestBase {
     public static WebDriver getCloudDriver(String browser, String browserVersion, String platform,
                                            String envName) throws MalformedURLException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setCapability("os_version", "Catalina");
-        desiredCapabilities.setCapability("resolution", "1920x1080");
+        desiredCapabilities.setCapability("name", "Cloud Execution");
         desiredCapabilities.setCapability("browser", browser);
         desiredCapabilities.setCapability("browser_version", browserVersion);
-        desiredCapabilities.setCapability("os", platform);
-        desiredCapabilities.setCapability("name", "Sample Test");
+        desiredCapabilities.setCapability("os", "OS X");
+        desiredCapabilities.setCapability("os_version", "Catalina");
+        desiredCapabilities.setCapability("resolution", "1920×1080");
         if (envName.equalsIgnoreCase("saucelabs")) {
             driver = new RemoteWebDriver(new URL(SAUCE_URL), desiredCapabilities);
         } else if (envName.equalsIgnoreCase("browserstack")) {
-            driver = new RemoteWebDriver(new URL(BROWERSTACK_URL), desiredCapabilities);
+            driver = new RemoteWebDriver(new URL(BROWSERSTACK_URL), desiredCapabilities);
         }
         return driver;
     }

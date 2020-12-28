@@ -5,11 +5,12 @@
 
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="https://www.nordstrom.com"/>
+    <!--if you use for cloud and mac you can use "OS X", for local you use "mac" or "windows"-->
     <parameter name="platform" value="mac"/>
 
     <parameter name="cloud" value="false"/>
-    <parameter name="envName" value="saucelabs"/>
-    <parameter name="browserVersion" value="77.0"/>
+    <parameter name="envName" value="browserstack"/>
+    <parameter name="browserVersion" value="85.0"/>
 
     <test name="Automation tests">
         <classes>
