@@ -1,2 +1,4 @@
-package com.cigna.pages;public class HomePage {
+package com.cigna.pages;
+
+public class HomePage {
 }

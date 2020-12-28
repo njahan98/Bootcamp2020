@@ -1,2 +1,4 @@
-package com.cignatest;public class HomePageValidations {
+package com.cignatest;
+
+public class HomePageValidations {
 }

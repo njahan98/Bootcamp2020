@@ -12,6 +12,7 @@
         <module>generic</module>
         <module>nordstrom</module>
         <module>facebook</module>
+        <module>cigna</module>
     </modules>
 
     <properties>
