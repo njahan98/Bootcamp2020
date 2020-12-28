@@ -1,9 +1,7 @@
 package com.nordstromtest;
 
-import com.nordstrom.pages.HomePage;
 import com.base.TestBase;
 import com.nordstrom.pages.LoginPage;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,6 +14,7 @@ public class LoginPageValidations extends TestBase{
     public void pageFactorySetup(){
         loginPage = PageFactory.initElements(driver, LoginPage.class);
     }
+
     @Test(enabled = false) //use enabled=false in order to run only one test case
     public void validateSignInButton() {
         sleepFor(5);
@@ -44,7 +43,7 @@ public class LoginPageValidations extends TestBase{
         loginPage.showPasswordToUser();
         sleepFor(2);
     }
-    @Test
+    @Test(enabled = false)
     public void validatePasswordSignIn(){
         loginPage.signIntoAccount();
     }

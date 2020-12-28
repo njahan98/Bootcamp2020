@@ -9,10 +9,8 @@ import org.testng.annotations.Test;
 public class HomePageValidations extends TestBase {
 
     private HomePage homePage;
-
     @BeforeMethod
     public void pageFactorySetup(){
-
         homePage = PageFactory.initElements(driver, HomePage.class);
     }
 

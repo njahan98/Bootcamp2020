@@ -2,7 +2,6 @@ package com.nordstrom.pages;
 
 import com.base.TestBase;
 import com.report.ExtentTestManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

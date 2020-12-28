@@ -15,6 +15,8 @@
     <test name="Automation tests">
         <classes>
             <class name="com.nordstromtest.HomePageValidations"/>
+            <class name="com.nordstromtest.LoginPageValidations"/>
+            <class name="com.nordstromtest.ProductPageValidations"/>
         </classes>
     </test>
 </suite>
