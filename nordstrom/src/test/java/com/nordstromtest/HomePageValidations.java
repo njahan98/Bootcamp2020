@@ -12,8 +12,10 @@ public class HomePageValidations extends TestBase {
 
     @BeforeMethod
     public void pageFactorySetup(){
+
         homePage = PageFactory.initElements(driver, HomePage.class);
     }
+
     @Test(enabled = false) //use enabled=false in order to run only one test case
     public void validateClickOnSearch() {
         sleepFor(5);
@@ -43,13 +45,8 @@ public class HomePageValidations extends TestBase {
         sleepFor(2);
     }
     @Test(enabled = false)
-    public void validateScrollDown(){
+    public void validateScrollingFeature(){
         validateClickOnDropDown();
-        homePage.scrollDown();
-    }
-   @Test
-    public void clickHandbag(){
-        validateClickOnDropDown();
-        homePage.chooseHandbag();
+        homePage.scrollUpAndDown();
     }
 }
