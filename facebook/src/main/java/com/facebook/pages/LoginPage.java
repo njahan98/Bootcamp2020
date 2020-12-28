@@ -35,4 +35,10 @@ public class LoginPage extends TestBase {
         loginButton.click();
         ExtentTestManager.log("User presses login to enter facebook homepage");
     }
+    public void loginProcess(){
+        validateFbLoginPage();
+        emailLoginField();
+        passwordLoginField();
+        pressingLogin();
+    }
 }

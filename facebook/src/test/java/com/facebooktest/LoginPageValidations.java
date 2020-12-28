@@ -29,7 +29,7 @@ public class LoginPageValidations extends TestBase {
         loginPage.passwordLoginField();
         sleepFor(3);
     }
-    @Test
+    @Test(enabled = false)
     public void validateUserLogsIn(){
         validateEntersPassword();
         loginPage.pressingLogin();

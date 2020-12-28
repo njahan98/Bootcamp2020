@@ -14,6 +14,7 @@
     <test name="Automation tests">
         <classes>
             <class name="com.facebooktest.LoginPageValidations"/>
+            <class name="com.facebooktest.MainPageValidations"/>
         </classes>
     </test>
 </suite>
