@@ -28,13 +28,27 @@ public class HomePageValidations extends TestBase {
         homePage.navigateHealthAndFamiliesLink();
         sleepFor(3);
     }
-    @Test
+    @Test(enabled = false)
     public void validatePaymentCenterLink() {
         validateHealthLink();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1600)");
         sleepFor(5);
         homePage.navigateToPaymentCenter();
+        sleepFor(5);
+    }
+    @Test(enabled = false)
+    public void validateMedicalTools() {
+        homePage.navigateSearchBar();
+        sleepFor(3);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1000)");
+        sleepFor(5);
+    }
+    @Test(enabled = false)
+    public void validateMedicalToolLink() {
+        validateMedicalTools();
+        homePage.clickMedicalTool();
         sleepFor(5);
     }
 }
