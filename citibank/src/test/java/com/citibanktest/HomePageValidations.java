@@ -45,4 +45,9 @@ public class HomePageValidations extends TestBase {
         sleepFor(5);
         homePage.clickCareersButton();
     }
+    @Test(enabled = false)
+    public void validateSearchOption() {
+        homePage.clickSearchButton();
+        sleepFor(5);
+    }
 }

@@ -29,6 +29,12 @@ public class HomePage extends TestBase {
     @FindBy(linkText="Careers")
     private WebElement careersButton;
 
+    @FindBy(id="search_icon")
+    private WebElement searchButton;
+
+    @FindBy(id="citi-autocomplete-content-searchbox-livesearch")
+    private WebElement searchBar;
+
     public void clickCreditCardsTab(){
         creditCardsTab.click();
         ExtentTestManager.log("Credit Cards tab is clicked and drop down appears");
@@ -51,5 +57,12 @@ public class HomePage extends TestBase {
         careersButton.click();
         sleepFor(5);
         ExtentTestManager.log("User scrolls down to bottom of home page and clicks Careers");
+    }
+    public void clickSearchButton(){
+        searchButton.click();
+        sleepFor(5);
+        ExtentTestManager.log("User clicks search button");
+        searchBar.sendKeys("Checking Account",Keys.ENTER);
+        ExtentTestManager.log("User searches in search bar");
     }
 }
