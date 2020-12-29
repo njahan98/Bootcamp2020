@@ -14,6 +14,7 @@
         <module>facebook</module>
         <module>cigna</module>
         <module>newyorktimes</module>
+        <module>citibank</module>
     </modules>
 
     <properties>
