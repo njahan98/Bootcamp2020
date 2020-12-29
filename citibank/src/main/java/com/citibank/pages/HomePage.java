@@ -17,6 +17,18 @@ public class HomePage extends TestBase {
     @FindBy(id="Citi-costco-anywhere-visa-credit-card-chkboxLabel")
     private WebElement compareButton;
 
+    @FindBy(id="compareNowButtonDisable")
+    private WebElement compareNowButton;
+
+    @FindBy(linkText="Banking")
+    private WebElement bankingTab;
+
+    @FindBy(linkText="Checking")
+    private WebElement checkingButton;
+
+    @FindBy(linkText="Careers")
+    private WebElement careersButton;
+
     public void clickCreditCardsTab(){
         creditCardsTab.click();
         ExtentTestManager.log("Credit Cards tab is clicked and drop down appears");
@@ -26,5 +38,18 @@ public class HomePage extends TestBase {
     public void clickCompareOption(){
         compareButton.click();
         ExtentTestManager.log("User scrolls down to costco card and compare option");
+        sleepFor(2);
+        compareNowButton.click();
+    }
+    public void clickBankingTab(){
+        bankingTab.click();
+        ExtentTestManager.log("Banking tab is clicked and drop down appears");
+        checkingButton.click();
+        ExtentTestManager.log("Checking option is clicked");
+    }
+    public void clickCareersButton(){
+        careersButton.click();
+        sleepFor(5);
+        ExtentTestManager.log("User scrolls down to bottom of home page and clicks Careers");
     }
 }

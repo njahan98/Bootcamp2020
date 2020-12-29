@@ -32,4 +32,17 @@ public class HomePageValidations extends TestBase {
         homePage.clickCompareOption();
         sleepFor(5);
     }
+    @Test(enabled = false)
+    public void validateBankingTab() {
+        sleepFor(5);
+        homePage.clickBankingTab();
+        sleepFor(5);
+    }
+    @Test(enabled = false)
+    public void validateScrollToCareers() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,3500)");
+        sleepFor(5);
+        homePage.clickCareersButton();
+    }
 }
