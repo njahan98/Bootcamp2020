@@ -14,6 +14,9 @@ public class MainPage extends TestBase {
     @FindBy(xpath = "(//article[@class='css-imuvyx'])[2]")
     private WebElement firstArticle;
 
+    @FindBy(linkText = "Arts")
+    private WebElement artsTab;
+
     public void nytMainPage(){
         String actualURL = TestBase.driver.getCurrentUrl();
         String expectedURL = "https://www.nytimes.com/";
@@ -27,5 +30,9 @@ public class MainPage extends TestBase {
     public void navigateToArticle(){
         firstArticle.click();
         ExtentTestManager.log("Article is opened");
+    }
+    public void navigateArtsTab(){
+        artsTab.click();
+        ExtentTestManager.log("Art tab is clicked");
     }
 }

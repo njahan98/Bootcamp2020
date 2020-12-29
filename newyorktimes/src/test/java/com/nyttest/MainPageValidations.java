@@ -14,18 +14,23 @@ public class MainPageValidations extends TestBase {
         mainPage = PageFactory.initElements(driver, MainPage.class);
     }
     @Test(enabled = false)
-    public void validateFirstTab() {
+    public void validateTechTab() {
         sleepFor(3);
         mainPage.navigateTechTab();
         sleepFor(3);
     }
-    @Test
+    @Test(enabled = false)
     public void validateArticleClick() {
-        validateFirstTab();
+        validateTechTab();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
         sleepFor(3);
         mainPage.navigateToArticle();
-        sleepFor(3);
+        sleepFor(5);
+    }
+    @Test(enabled = false)
+    public void validateArtsTab() {
+        mainPage.navigateArtsTab();
+        sleepFor(5);
     }
 }
