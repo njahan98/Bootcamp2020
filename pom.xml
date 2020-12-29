@@ -13,6 +13,7 @@
         <module>nordstrom</module>
         <module>facebook</module>
         <module>cigna</module>
+        <module>newyorktimes</module>
     </modules>
 
     <properties>

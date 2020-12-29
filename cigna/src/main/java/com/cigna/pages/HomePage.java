@@ -28,7 +28,7 @@ public class HomePage extends TestBase {
         String actualURL = TestBase.driver.getCurrentUrl();
         String expectedURL = "https://www.cigna.com/";
         Assert.assertTrue(actualURL.contains(expectedURL));
-        ExtentTestManager.log("Cigna homepage is opened");
+        ExtentTestManager.log("Cigna homepage is opened " + actualURL);
     }
     public void navigateFirstTab(){
         firstTab.click();
