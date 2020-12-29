@@ -29,6 +29,12 @@ public class ProfilePageValidations extends TestBase {
         js.executeScript("window.scrollBy(0,200)");
         sleepFor(5);
         profilePage.clickStatusBar();
-        sleepFor(3);
+    }
+    @Test(enabled = false)
+    public void validateUserLikesPost(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1000)");
+        profilePage.likesStatus();
+        sleepFor(5);
     }
 }
